@@ -1,0 +1,66 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <context-param>
+    <param-name>Application Name</param-name>
+    <param-value>BANKING MANAGEMENT SYSTEM System</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>Application Version</param-name>
+    <param-value>1.0.0</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>Built Country</param-name>
+    <param-value>Kenya</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>database-name</param-name>
+    <param-value>banking</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>database-pwd</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  
+  <servlet>
+    <servlet-name>Open-account</servlet-name>
+    <servlet-class>com.hanson.app.actions.accounts.CreateAccountAction</servlet-class>
+    <init-param>
+      <param-name>Page Name</param-name>
+      <param-value>Open New Account</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Open-account</servlet-name>
+    <url-pattern>/open-account</url-pattern>
+  </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Register Customer</servlet-name>
+        <servlet-class>com.hanson.app.actions.users.RegisterCustomerAction</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Register Customer</servlet-name>
+        <url-pattern>/customer-register</url-pattern>
+    </servlet-mapping>
+
+  <servlet>
+    <servlet-name>View Customers</servlet-name>
+    <servlet-class>com.hanson.app.actions.users.DisplayCustomersAction</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>View Customers</servlet-name>
+    <url-pattern>/customers</url-pattern>
+  </servlet-mapping>
+</web-app>
